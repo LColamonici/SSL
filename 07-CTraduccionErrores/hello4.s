@@ -1,4 +1,4 @@
-	.file	"hello3.c"
+	.file	"hello4.c"
 	.text
 	.def	__main;	.scl	2;	.type	32;	.endef
 	.section .rdata,"dr"
