@@ -49,9 +49,28 @@ K2051
     Esto es porque en el llamado a la función, aparece un %d pero nunca se especifica de donde sacar ese valor entero
 
 * 4
+    a) Se corrige el error agregando la variable "i" como segundo parametro en printf. Luego se preprocesa, compila, ensambla y ejecuta hello6 con el comando:
+    ```
+    gcc hello6.c -o hello6.exe
+    ```
+* 5
     b)
-        i - el codigo arroja un warning relacionado con la declaracion implicita de printf (al no incluir stdio.h, la funcion todavía no esta declarada)
+        I - el codigo arroja un warning relacionado con la declaracion implicita de printf (al no incluir stdio.h, la funcion todavía no esta declarada)
         \
-        ii - un prototipo es la declaracion de una funcion sin su definición. Se pueden generar de forma directa, usando typedef, dentro de un enum{}, usando punteros a funciones, dentro de una estructura, dentro de otra función o en un macro
+        II - un prototipo es la declaracion de una funcion sin su definición. Se pueden generar de forma directa, usando typedef, dentro de un enum{}, usando punteros a funciones, dentro de una estructura, dentro de otra función o en un macro
         \
-        iii - Una declaración implicita es el llamado a una funcion sin un prototipo declarado previamente
+        III - Una declaración implicita es el llamado a una funcion sin un prototipo declarado previamente
+        \
+        IV - Como la funcion se declara implicitamente durante el llamado a la misma (al no haber incluido ```stdio.h```), la especificacion de la funcion es la siguiente:
+        - no se sabe el tipo de dato que devuelve, pero se asume que es un entero
+        - los argumentos que recibe son una cadena de tipo ```const char*``` y un numero de tipo ```int```
+        \
+        V - Para la función printf (como se la define en stdio.h), hay 2 implementaciones principales:
+        - recibe solamente una cadena de caracteres y la envía al stream de salida
+        - recibe una cadena de caracteres y una serie de argumentos adicionales que determinan valores en lugares especificos de la primera cadena. Luego, manda la cadena resultante por el stream de salida
+        \
+        VI - Una funcion built-in es una función que viene integrada en el lenguaje de programación, por lo que no hace falta      
+* 6
+    b) Para unir las funcionalidades de hello8.c y studio1.c en un solo ejecutable, se usa el comando
+    ```gcc hello8.c studio1.c -o hello8.exe``` 
+    c) Si se eliminan o agregan argumentos, la funcion invocada sería distinta de la declarada y no estaría definida (prontf solo esta definida para recibir una cadena y un entero)
