@@ -1,0 +1,22 @@
+digraph G{
+    size="4,6";
+    start [shape=box];
+    stateEqOut [label = "stateOut"]
+    start->stateEqOut [label = "nl=nw=nc=0"];
+    cAssign [label="c = getchar()"]
+    stateEqOut->cAssign [label ="++nc"]
+    ifNulo [shape=diamond, label ="c=='\\n'?"]
+    cAssign->ifNulo
+    cNulo [label = "++nl"]
+    ifNulo->cNulo [label = "true"]
+    ifNulo->ifFinPalabra [label="false"]
+    cNulo->ifFinPalabra
+    ifFinPalabra [shape=diamond, label="c=='\\n' | | c=='\\t' | |c=='  '   ?"]
+    ifFinPalabra->stateEqOut [label="true", weight=0]
+    ifFinPalabra->ifStateOut[label="false"]
+    ifStateOut [shape=diamond, label = "state==OUT?"]
+    ifStateOut->nuevaPalabra[label = "true"]
+    ifStateOut->cAssign [label ="false", weight = 1]
+    nuevaPalabra->stateIN [label = "nw++", weight=0]
+    stateIN->cAssign
+}
