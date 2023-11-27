@@ -1,0 +1,15 @@
+digraph G{
+    nuevoToken [label="nuevoToken -"]
+    operando [label="operando +"]
+    operador [label="operador +"]
+    finDeExpresion [label="finDeExpresion +"]
+    finDeTokens[label="finDeTokens +"]
+    nuevoToken->getchar
+    getchar
+    getchar->operando [label="[0-9]"]
+    operando->operando[label="[0-9]"]
+    getchar->operador[label="+ | - | * | /"]
+    getchar->finDeExpresion [label= "\\n"]
+    getchar->finDeTokens [label="EOF"]
+    
+}

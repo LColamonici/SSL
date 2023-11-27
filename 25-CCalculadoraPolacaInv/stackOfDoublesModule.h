@@ -1,3 +1,6 @@
+#ifndef STACKDOUBLESMODULE_H
+#define STACKDOUBLESMODULE_H
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
@@ -30,3 +33,4 @@ bool stkIsFull(){
     return sp>=STACKDEPTH;
 }
 
+#endif
