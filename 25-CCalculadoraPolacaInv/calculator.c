@@ -6,7 +6,7 @@ void operarCon(struct Token t){
         case Addition:
             push(pop()+pop());
             break;
-        case Substraction:
+        case Subtraction:
             double b=pop(), a=pop();
             push(a-b);
             break;
@@ -26,9 +26,9 @@ void operarCon(struct Token t){
 int main(){
     struct Token t;
     while(getNextToken(&t)){
-        while(t.type!=PopResult){
+        while(t.type!=PopResult && t.type!=EOF){
             if(t.type==Number) push(t.val);
-            else if(t.type==Addition||t.type==Substraction||t.type==Multiplication||t.type==Division) operarCon(t);
+            else if(t.type==Addition||t.type==Subtraction||t.type==Multiplication||t.type==Division) operarCon(t);
             else if(t.type=LexError){
                 printf("Error, lexema o  caracter no reconocido: ");
                 printf(t.lexeme);

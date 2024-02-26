@@ -1,17 +1,19 @@
 CC = gcc
-CFLAGS = -std=c11
+FLAGS = -std=c17
 
-TARGET = mi_programa.exe
-SOURCES = main.c funciones.c
+TARGET = calculator.exe
+SOURCES = calculator.c scanner.c stackOfDoublesModule.c
 OBJECTS = $(SOURCES:.c=.o)
 
 all: $(TARGET)
 
 $(TARGET): $(OBJECTS)
-	$(CC) $(CFLAGS) -o $@ $^
+	$(CC) $(FLAGS) -o $@ $^
+scanner.o: scanner.c
+	$(CC) -c scanner.c -o scanner.o $(FLAGS)
 
-%.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+stackOfDoublesModule.o:stackOfDoublesModule.c
+	$(CC) -c stackOfDoublesModule.c -o stackOfDoublesModule.o $(FLAGS)
 
 clean:
-	del $(TARGET) $(OBJECTS)
+	del /f $(TARGET) $(OBJECTS)

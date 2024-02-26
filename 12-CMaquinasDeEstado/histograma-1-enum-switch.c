@@ -1,38 +1,37 @@
 #include <stdio.h>
+#include "histograma.h"
 
-enum StateCode{
-    OUT,
-    IN
-};
+//typedef enum{OUT,IN} State;
 /*
  * RESPECTO AL CODIGO ORIGINAL
  * Ventajas: el switch hace mas facil entender el alcance de cada condicional, el uso de enum permite agregar 
  * facilmente mas estados si hace falta
  * Desventajas: la estructura del switch complica la legibilidad del codigo al tener varios casos en los que se hace lo mismo
  */
-typedef enum StateCode State;
 
-main1(){
+
+int mainEnumSwitch(){
     int c, nl, nw, nc;
     nl=nw=nc=0;
-    State state = OUT;
+    State s = OUT;
     while((c=getchar())!=EOF){
         ++nc;
         switch(c){
+            case ' ':
+                s=OUT;
+                break;
             case '\n':
                 ++nl;
-                state=OUT;
+                s=OUT;
                 break;
             case '\t':
-                state=OUT;
+                s=OUT;
                 break;
-            case ' ':
-                state=OUT;
-                break;
+            
             default:
-                switch(state){
+                switch(s){
                     case OUT:
-                        state=IN;
+                        s=IN;
                         ++nw;
                         break;
                     default:
@@ -42,4 +41,12 @@ main1(){
         }
     }
     printf("%d %d %d\n", nl, nw, nc);
+    return 0;
 }
+
+/*
+int main(){
+    mainEnumSwitch();
+    return 0;
+}
+*/

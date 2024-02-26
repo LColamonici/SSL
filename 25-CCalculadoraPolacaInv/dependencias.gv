@@ -1,0 +1,11 @@
+digraph G{
+    SCANNER_H[label="scanner.h"]
+    SCANNER_C[label="scanner.c"]
+    CALC[label="calculator.c"]
+    STACK_H[label="stackOfDoublesModule.h"]
+    STACK_C[label="stackOfDoublesModule.c"]
+    SCANNER_H->SCANNER_C
+    SCANNER_H->CALC
+    STACK_H->STACK_C
+    STACK_H->CALC
+}

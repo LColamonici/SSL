@@ -1,8 +1,9 @@
 #include <stdio.h>
-#include "histograma-1-enum-switch.c"
+#include "histograma.h"
 
+//typedef enum{OUT,IN} State;
 
-int main2(){
+int mainGoto(){
     int c, nl, nw, nc;
     nl=nw=nc=0;
     State state = OUT;
@@ -11,15 +12,23 @@ int main2(){
         if(c=='\n') goto nuevaLinea;
         if(c=='\t' || c==' ') goto finPalabra;
         else if(state==OUT) goto nuevaPalabra;
+        goto finIteracion;
         nuevaLinea:
         ++nl;
         finPalabra:
         state=OUT;
-        goto finCiclo;
+        goto finIteracion;
         nuevaPalabra:
         state=IN;
         ++nw;
-        finCiclo:
+        finIteracion:
     }
     printf("%d %d %d\n", nl, nw, nc);
+    return 0;
 }
+
+/*
+int main(){
+    mainGoto();
+    return 0;
+}*/
