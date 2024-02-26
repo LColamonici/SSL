@@ -3,7 +3,7 @@
 de [KR1988].
 **b.** Dibujar el árbol de expresión para la inicialización de los contadores: nl
 = nw = nc = 0.
-![punto 1b](.\TP12_1b.jpg)
+![punto 1b](.\TP12_1b.jpeg)
 **c.** Dibujar el árbol de expresión para la expresión de control del segundo if:
 c == ' ' || c == '\n' || c == '\t'.
 ![punto 1c](.\TP12_1c.jpg)
