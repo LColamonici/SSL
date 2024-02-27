@@ -28,10 +28,11 @@ int main(){
     while(getNextToken(&t)){
         while(t.type!=PopResult && t.type!=EOF){
             if(t.type==Number) push(t.val);
-            else if(t.type==Addition||t.type==Subtraction||t.type==Multiplication||t.type==Division) operarCon(t);
+            else if(isOperator(t.type)) operarCon(t);
             else if(t.type=LexError){
                 printf("Error, lexema o  caracter no reconocido: ");
                 printf(t.lexeme);
+                printf(" ascii: %d %d\n", (int)(t.lexeme[0]), (int)(t.lexeme[1]));
             }
             getNextToken(&t);
         }

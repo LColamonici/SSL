@@ -25,8 +25,9 @@ struct Token{
     TokenValue val; 
     char lexeme[MAX_LEXEME_LENGTH];
 };
-bool isOperator(char c);
-bool strIsOperator(char* s);
-bool getNextToken(struct Token *t);
+int isOperator(char c);
+int strIsOperator(char* s);
+int getNextToken(struct Token *t);
+char nextCharInStream();
 
 #endif

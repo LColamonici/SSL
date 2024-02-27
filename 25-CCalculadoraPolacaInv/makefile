@@ -17,3 +17,7 @@ stackOfDoublesModule.o:stackOfDoublesModule.c
 
 clean:
 	del /f $(TARGET) $(OBJECTS)
+
+remake:
+	make clean
+	make
