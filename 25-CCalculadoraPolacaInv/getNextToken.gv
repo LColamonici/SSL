@@ -1,15 +1,24 @@
 digraph G{
-    nuevoToken [label="nuevoToken -"]
-    operando [label="operando +"]
-    operador [label="operador +"]
-    finDeExpresion [label="finDeExpresion +"]
-    finDeTokens[label="finDeTokens +"]
-    nuevoToken->getchar
-    getchar
-    getchar->operando [label="[0-9]"]
-    operando->operando[label="[0-9]"]
-    getchar->operador[label="+ | - | * | /"]
-    getchar->finDeExpresion [label= "\\n"]
-    getchar->finDeTokens [label="EOF"]
-    
+    rankdir="LR"
+
+    2[label="Operador +"]
+    lexError[label="LexError +"]
+    numero[label="Numero +"]
+    ent[label="Numero Entero +"]
+    pop[label="PopResult +"]
+
+    getchar[label="getchar -"]
+    getchar->1[label = " - "]
+    1->2[label="<no digito>"]
+    1->3[label="<digito>"]
+    getchar->2[label="+ | * | /"]
+    3->3[label="<digito>"]
+    3->4[label="'.'"]
+    4->lexError[label="<no digito>"]
+    4->numero[label="<digito>"]
+    numero->numero[label="<digito>"]
+    getchar->3[label="<digito>"]
+    3->ent[label="<no digito>"]
+    getchar->4[label="' . '"]
+    getchar->pop[label="'\\n'"]
 }
