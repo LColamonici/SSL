@@ -32,7 +32,8 @@ int main(){
             else if(t.type=LexError){
                 printf("Error, lexema o  caracter no reconocido: ");
                 printf(t.lexeme);
-                printf(" ascii: %d %d\n", (int)(t.lexeme[0]), (int)(t.lexeme[1]));
+                printf("\n");
+                //printf(" ascii: %d %d\n", (int)(t.lexeme[0]), (int)(t.lexeme[1]));
             }
             getNextToken(&t);
         }

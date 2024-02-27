@@ -45,10 +45,20 @@ int getNextToken(struct Token *t){
         t->type=Number;
         lexeme[i]=c=getchar();
         //i++;
-        while(isdigit(c) ||c=='.'){
+        while(isdigit(c) ){
             lexeme[i]=c;
             i++;
             c=getchar();
+        }
+        if(c=='.'){
+            lexeme[i++]=c;
+            c=getchar();
+            while(isdigit(c)){
+                lexeme[i]=c;
+                i++;
+                c=getchar();
+            }
+            if(c=='.') t->type=LexError;//si encuentra un segundo punto, el numero esta mal escrito
         }
         if(c!=' ') ungetc(c, stdin);
         lexeme[i]='\0';
