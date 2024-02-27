@@ -13,8 +13,11 @@ histog2.o: histograma-2-goto.c
 histog3.o: histograma-3-rec.c
 	$(CC) -c histograma-3-rec.c -o histog3.o $(FLAGS)
 
-$(NOMBRE_EXE): main.c histog1.o histog2.o histog3.o
-	$(CC) main.c histog1.o histog2.o histog3.o -o $(NOMBRE_EXE) $(FLAGS)
+histog4.o: histograma-4-x.c
+	$(CC) -c histograma-4-x.c -o histog4.o $(FLAGS)
+
+$(NOMBRE_EXE): main.c histog1.o histog2.o histog3.o histog4.o
+	$(CC) main.c histog1.o histog2.o histog3.o histog4.o -o $(NOMBRE_EXE) $(FLAGS)
 
 clean: 
 	del /f $(NOMBRE_EXE).exe *.o

@@ -15,6 +15,12 @@ int main(int argc, char* argv[]){
         case 3:
             mainRec();
             break;
+        case 4:
+            mainx();
+            break;
+        default:
+            printf("argumento invalido");
+            break;
     }
     return 0;
 }

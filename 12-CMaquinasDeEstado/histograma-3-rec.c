@@ -31,7 +31,7 @@ void analizarCaracter(){
 int mainRec(){
     nl=nw=nc=0;
     analizarCaracter();    
-    printf("%d %d %d\n", nl, nw, nc);
+    printf("lineas:%d palabras:%d caracteres:%d\n", nl, nw, nc);
     return 0;
 }
 

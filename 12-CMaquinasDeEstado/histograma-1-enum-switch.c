@@ -40,7 +40,7 @@ int mainEnumSwitch(){
                 break;
         }
     }
-    printf("%d %d %d\n", nl, nw, nc);
+    printf("lineas:%d palabras:%d caracteres:%d\n", nl, nw, nc);;
     return 0;
 }
 
