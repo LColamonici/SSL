@@ -3,14 +3,20 @@
 de [KR1988].
 **b.** Dibujar el árbol de expresión para la inicialización de los contadores: nl
 = nw = nc = 0.
+
 ![punto 1b](./TP12_1b.jpeg)
+
 **c.** Dibujar el árbol de expresión para la expresión de control del segundo if:
 c == ' ' || c == '\n' || c == '\t'.
+
 ![punto 1c](./TP12_1c.jpg)
+
 # 2. Máquina de Estado:
 **a.** Describir en lenguaje dot [DOT] y dentro del archivo histograma.gv la
 máquina de estado que resuelve el problema planteado.
+
 ![punto 1b](./histograma.jpeg)
+
 (archivo .gv incluido en el repositorio)
 
 **b.** Formalizar la máquina de estados como una n-upla, basarse en el
@@ -20,9 +26,11 @@ La maquina de estados se puede definir como una 5-upla de la forma(Q, Σ, T, Q0,
 - Q es el conjunto de estados, en este caso {OUT, IN}
 - Σ es el alfabeto de caracteres que reconoce el automata, en este caso el conjunto de todos los caracteres espaciadores y no espaciadores
 - T es la funcion de transición entre estados, que en este caso se puede representar con la siguiente tabla de transiciones:
+
 ![tabla de transiciones](./transiciones.jpg)
--Q0 es el estado inicial, en este caso el estado '0'
--F es el conjunto de estados finales, en este caso {'1'}
+
+- Q0 es el estado inicial, en este caso el estado '0'
+- F es el conjunto de estados finales, en este caso {'1'}
 
 # 3. Implementaciones de Máquinas de Estado:
 Las implementaciones varían en los conceptos que utilizan para representaar
