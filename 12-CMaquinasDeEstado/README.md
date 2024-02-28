@@ -1,3 +1,14 @@
+# TP0: Hola Mundo
+
+por Luca Colamonici \
+comision K2051
+
+* version del compilador: gcc 13.2.0
+* compilado en: c17
+
+
+
+
 # 1. Árboles de Expresión
 **a.** Estudiar el programa del ejemplo las sección 1.5.4 Conteo de Palabras
 de [KR1988].

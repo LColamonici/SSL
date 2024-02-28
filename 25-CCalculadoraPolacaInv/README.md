@@ -1,8 +1,11 @@
-# TP 25: Calculadora con notacion polaca inversa
+# TP0: Hola Mundo
 
+por Luca Colamonici \
+comision K2051
 
-* Luca Colamonici
-* K2051
+* version del compilador: gcc 13.2.0
+* compilado en: c17
+
 
 
 1. Estudiar la implementación de las sección 4.3 de [KR1988].
