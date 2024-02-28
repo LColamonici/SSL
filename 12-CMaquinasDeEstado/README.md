@@ -15,6 +15,15 @@ máquina de estado que resuelve el problema planteado.
 
 **b.** Formalizar la máquina de estados como una n-upla, basarse en el
 Capítulo #1 del Volumen #3 de [MUCH2012].
+
+La maquina de estados se puede definir como una 5-upla de la forma(Q, Σ, T, Q0, F), donde:
+- Q es el conjunto de estados, en este caso {OUT, IN}
+- Σ es el alfabeto de caracteres que reconoce el automata, en este caso el conjunto de todos los caracteres espaciadores y no espaciadores
+- T es la funcion de transición entre estados, que en este caso se puede representar con la siguiente tabla de transiciones:
+![tabla de transiciones](./transiciones.jpg)
+-Q0 es el estado inicial, en este caso el estado '0'
+-F es el conjunto de estados finales, en este caso {'1'}
+
 # 3. Implementaciones de Máquinas de Estado:
 Las implementaciones varían en los conceptos que utilizan para representaar
 los estados y las transiciones.
@@ -78,6 +87,10 @@ objetivo de este punto es diseñar una implementación diferente a las
 implementaciones #1, #2, y #3.
 i. Diseñar una nueva implementación e indicar en Readme.md cómo esa
 implementación representa los estados y cómo las transiciones.
+**Respuesta:**
+la cuarta implementación representa los estados como las otras implementaciones: con una variable de tipo ```State```. La principal diferencia con las otras implementaciones es el hecho de que las transiciones se determinan usando una matriz de punteros a funciones. La transicion se determina por medio del estado actual (que selecciona la fila) y la condición del caracter leído de ser un espaciador o no (que determina la columna).
+Con cada caracter leido se llama a la función correspondiente en la tabla y en esta se cambia al nuevo estado y se modifican los contadores necesarios (Ej: Si el estado actual es OUT y se lee un caracter no espaciador, se llama a una funcion que cambie el estado a IN e incremente el contador de palabras)
+
 ii. Escribir el programa, histograma-x.c que siga la nueva
 implementación.
 # 4. Escribir un único programa de prueba para las cuatro implementaciones.

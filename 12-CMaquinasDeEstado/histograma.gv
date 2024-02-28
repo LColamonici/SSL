@@ -1,8 +1,12 @@
 digraph G{
     rankdir="LR"
-    out[label="OUT +"]
+    inicio[label="0 -"]
+    IN[label="2 (IN)"]
+    out[label="1 (OUT) +"]
     out->out[label="espaciador"]
     out->IN[label="no espaciador"]
     IN->IN[label="no espaciador"]
     IN->out[label="espaciador"]
+    inicio->out[label="espaciador"]
+    inicio->IN[label="no espaciador"]
 }
