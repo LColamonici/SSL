@@ -1,3 +1,12 @@
+/*
+ * Histograma-4-x.c
+ *
+ * Progama de la seccion 1.5.4 de [KR1988] modificado para usar una matriz de punteros a funciones
+ * como tabla de transiciones para control de estados
+ * 
+ * Luca Colamonici
+ */
+
 #include <stdio.h>
 #include "histograma.h"
 

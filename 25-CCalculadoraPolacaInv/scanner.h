@@ -1,3 +1,12 @@
+/*
+ * scanner.h
+ *
+ * Contrato con la interfaz de scanner que necesita calculator.c
+ * 
+ * Luca Colamonici
+ */
+
+
 #ifndef TOKENSCANNER_H
 #define TOKENSCANNER_H
 

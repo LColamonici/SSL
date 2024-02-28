@@ -1,3 +1,11 @@
+/*
+ * stackOfDoublesModule.c
+ *
+ * Implementación de una pila para almacenar los operandos entrantes en orden
+ * 
+ * Luca Colamonici
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>

@@ -1,5 +1,14 @@
+/*
+ * calculator.c
+ *
+ * Calculadora en notación polaca inversa
+ * 
+ * Luca Colamonici
+ */
+
 #include "scanner.h"
 #include "stackOfDoublesModule.h"
+
 
 void operarCon(struct Token t){
     switch(t.type){

@@ -1,5 +1,15 @@
+
+/*
+ * Histograma.h
+ *
+ * Contrato con la interfaz necesaria para main.c
+ * 
+ * Luca Colamonici
+ */
+
 #ifndef HISTOGRAMA_H
 #define HISTOGRAMA_H
+
 typedef enum{OUT,IN} State;
 int isSpacing(char);
 int mainEnumSwitch();

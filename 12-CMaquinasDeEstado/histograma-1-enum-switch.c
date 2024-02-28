@@ -1,9 +1,16 @@
+/*
+ * Histograma-1-enum-switch.c
+ *
+ * Progama de la seccion 1.5.4 de [KR1988] modificado para usar enum y switch para
+ * almacenamiento y control de estados
+ * 
+ * Luca Colamonici
+ */
 #include <stdio.h>
 #include "histograma.h"
 
-//typedef enum{OUT,IN} State;
-/*
- * RESPECTO AL CODIGO ORIGINAL
+
+ /* RESPECTO AL CODIGO ORIGINAL
  * Ventajas: el switch hace mas facil entender el alcance de cada condicional, el uso de enum permite agregar 
  * facilmente mas estados si hace falta
  * Desventajas: la estructura del switch complica la legibilidad del codigo al tener varios casos en los que se hace lo mismo

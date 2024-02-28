@@ -1,10 +1,17 @@
+/*
+ * scanner.c
+ *
+ * implementacion del analizador lexico necesario para separar y evaluar los lexemas de entrada
+ * 
+ * Luca Colamonici
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
 #include <ctype.h>
 #include <string.h>
 #include "scanner.h"    
-
 
 int isOperator(char c){
     return (c==Addition||c==Subtraction||c==Multiplication||c==Division);
@@ -18,9 +25,6 @@ int strIsOperator(char* s){
     return isOperator(s[0]) && s[1]=='\0';
 }
 
-/*int isDigit(char c){
-    return c=='1'||c=='2'||c=='3'||c=='4'||c=='5'||c=='6'||c=='7'||c=='8'||c=='9'||c=='0';
-}*/
 
 char nextCharInStream(){
     char c = getchar();

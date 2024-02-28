@@ -1,7 +1,14 @@
+/*
+ * Histograma-3-rec.c
+ *
+ * Progama de la seccion 1.5.4 de [KR1988] modificado para usar funciones recursivas para
+ * almacenamiento y control de estados
+ * 
+ * Luca Colamonici
+ */
+
 #include <stdio.h>
 #include "histograma.h"
-
-//typedef enum{OUT,IN} State;
 
 void analizarCaracter();
 

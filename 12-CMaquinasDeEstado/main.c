@@ -1,6 +1,18 @@
+/*
+ * main.c
+ *
+ * Progama desde el que se puede probar y usar cada una de las 4 implementadiones de la
+ * seccion 1.5.4 de [KR1988]
+ * 
+ * Luca Colamonici
+ */
+
+
+
 #include <stdio.h>
 #include<stdlib.h>
 #include "histograma.h"
+
 
 int main(int argc, char* argv[]){
     //int c, nl, nw, nc;

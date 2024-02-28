@@ -1,7 +1,14 @@
+/*
+ * Histograma-2-goto.c
+ *
+ * Progama de la seccion 1.5.4 de [KR1988] modificado para usar goto para
+ * control de estados
+ * 
+ * Luca Colamonici
+ */
+
 #include <stdio.h>
 #include "histograma.h"
-
-//typedef enum{OUT,IN} State;
 
 int mainGoto(){
     int c, nl, nw, nc;
