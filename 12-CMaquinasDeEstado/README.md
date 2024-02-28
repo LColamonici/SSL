@@ -3,14 +3,14 @@
 de [KR1988].
 **b.** Dibujar el árbol de expresión para la inicialización de los contadores: nl
 = nw = nc = 0.
-![punto 1b](.\TP12_1b.jpeg)
+![punto 1b](./TP12_1b.jpeg)
 **c.** Dibujar el árbol de expresión para la expresión de control del segundo if:
 c == ' ' || c == '\n' || c == '\t'.
-![punto 1c](.\TP12_1c.jpg)
+![punto 1c](./TP12_1c.jpg)
 # 2. Máquina de Estado:
 **a.** Describir en lenguaje dot [DOT] y dentro del archivo histograma.gv la
 máquina de estado que resuelve el problema planteado.
-![punto 1b](.\histograma.jpeg)
+![punto 1b](./histograma.jpeg)
 (archivo .gv incluido en el repositorio)
 
 **b.** Formalizar la máquina de estados como una n-upla, basarse en el
