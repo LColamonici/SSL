@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 Hola p2b
+=======
+hola, prueba2 A
+>>>>>>> p2a
